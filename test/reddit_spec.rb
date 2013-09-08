@@ -1,20 +1,20 @@
 require 'minitest/autorun'
 
-$:.unshift(File.dirname(__FILE__) + "/..")
+$LOAD_PATH.unshift(File.dirname(__FILE__) + '/..')
 
 require './Reddit.rb'
 
 describe 'Reddit' do
-	before do	
-		@me = Reddit.new('reddit')
-	end
+  before do
+    @me = Reddit.new('reddit')
+  end
 
-	it 'should have a username' do
-		@me.username.must_equal "reddit"
-	end
+  it 'should have a username' do
+    @me.username.must_equal 'reddit'
+  end
 
   it 'should have JSON data' do
-    @me.data = JSON.parse(File.new("./test/test_data.json").read)
+    @me.data = JSON.parse(File.new('./test/test_data.json').read)
     @me.data.class.must_equal Hash
   end
 
@@ -47,6 +47,6 @@ describe 'Reddit' do
   end
 
   it 'should output in the correct format' do
-    @me.to_s.must_equal "Reddit: reddit 35580:816"
+    @me.to_s.must_equal 'Reddit: reddit 35580:816'
   end
 end

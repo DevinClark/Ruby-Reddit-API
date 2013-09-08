@@ -4,6 +4,13 @@ require 'json'
 require 'date'
 require 'time'
 
+# Public: Allows for getting user info for a particular Reddit user.
+#
+# Examples
+#
+#   me = Reddit.new('reddit')
+#   puts me
+#
 class Reddit
   attr_accessor :username, :data
 
