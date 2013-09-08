@@ -49,5 +49,4 @@ describe 'Reddit' do
   it 'should output in the correct format' do
     @me.to_s.must_equal "Reddit: reddit 35580:816"
   end
-
 end
