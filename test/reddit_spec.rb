@@ -46,6 +46,10 @@ describe 'Reddit' do
     @me.over_18.must_equal false
   end
 
+  it 'should have a time object for cake day' do
+    @me.cake_day.class.must_equal time
+  end
+
   it 'should output in the correct format' do
     @me.to_s.must_equal 'Reddit: reddit 35580:816'
   end

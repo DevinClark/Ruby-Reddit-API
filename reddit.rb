@@ -53,6 +53,10 @@ class Reddit
     !!@data['data']['over_18']
   end
 
+  def cake_day
+    Time.at(@data['data']['created'])
+  end
+
   def to_s
     "Reddit: #{username} #{link_karma}:#{comment_karma}"
   end
